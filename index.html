@@ -164,12 +164,12 @@
     <!-- services section starts  -->
 
     <section class="services" id="services">
-      <h1>Services</h1>
-
+      <div class="center"><h1>Services</h1></div>
+      <br />
       <div class="box-container">
         <div class="box">
           <i class="fas fa-hotel"></i>
-          <h3>affordable hotels</h3>
+          <h3>Affordable Hotels</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             commodi earum, quis voluptate exercitationem ut minima itaque iusto
@@ -178,7 +178,7 @@
         </div>
         <div class="box">
           <i class="fas fa-utensils"></i>
-          <h3>food and drinks</h3>
+          <h3>Food and Drinks</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             commodi earum, quis voluptate exercitationem ut minima itaque iusto
@@ -187,7 +187,7 @@
         </div>
         <div class="box">
           <i class="fas fa-bullhorn"></i>
-          <h3>safty guide</h3>
+          <h3>Safety Guide</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             commodi earum, quis voluptate exercitationem ut minima itaque iusto
@@ -196,7 +196,7 @@
         </div>
         <div class="box">
           <i class="fas fa-globe-asia"></i>
-          <h3>around the world</h3>
+          <h3>Around the World</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             commodi earum, quis voluptate exercitationem ut minima itaque iusto
@@ -205,7 +205,7 @@
         </div>
         <div class="box">
           <i class="fas fa-plane"></i>
-          <h3>fastest travel</h3>
+          <h3>Fastest Travel</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             commodi earum, quis voluptate exercitationem ut minima itaque iusto
@@ -214,7 +214,7 @@
         </div>
         <div class="box">
           <i class="fas fa-hiking"></i>
-          <h3>adventures</h3>
+          <h3>Adventures</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
             commodi earum, quis voluptate exercitationem ut minima itaque iusto
@@ -227,8 +227,8 @@
     <!-- packages section starts  -->
 
     <section class="packages" id="packages">
-      <h1>Packages</h1>
-
+      <div class="center"><h1>Packages</h1></div>
+      <br />
       <div class="box-container">
         <div class="box">
           <img
@@ -316,9 +316,44 @@
       </div>
     </section>
 
+    <!---start newsletter section---->
+    <section class="newsletter" id="about">
+      <div class="newsletter-text">
+        <!-- <h6>Best online learning platform</h6> -->
+        <h1>Subscribe Newsletter</h1>
+        <p>
+          You learn today and earn tommorow. The roots of education are bitter
+          but the fruits are sweet.
+        </p>
+        <div class="form">
+          <form>
+            <input
+              type="email"
+              placeholder="Enter Your Email Address"
+              required
+            />
+            <input type="submit" value="Subscribe" required />
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- services section ends -->
     <!-- <section id="package"></section> -->
     <!-- <section id="action"></section> -->
+
+    <footer>
+      <div class="foot">
+        <div class="last-text">
+          <p>Copyright © Q-Bee 2023. All rights reserved.</p>
+        </div>
+        <div class="upBtn">
+          <button onclick="topFunction()" id="upBtn" title="Go to top">
+            <i class="fas fa-chevron-circle-up fa-3x"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
 
     <script>
       let slideIndex = 0;
@@ -341,6 +376,31 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+        // Get to the top page
+        let upButton = document.getElementById("upBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            upButton.style.display = "block";
+          } else {
+            upButton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
       }
     </script>
   </body>

@@ -199,6 +199,9 @@ html {
 	border-color: blue;
 }
 
+.center {
+  text-align: center;
+}
 
 .services {
   padding: 50px 7%;
@@ -211,7 +214,7 @@ html {
 }
 
 .services .box-container .box{
-  flex: 1 1 30rem;
+  flex: 1 1 20rem;
   border-radius: .5rem;
   padding:1rem;
   text-align: center;
@@ -300,7 +303,109 @@ html {
   text-decoration: line-through;
 }
 
+.newsletter{
+	position: relative;
+	height: 60vh;
+	width: 100%;
+	text-align: center;
+}
 
+.newsletter-text h1{
+	font-size: larger;
+	margin: 15px 0 15px;
+}
+
+.newsletter-text h6{
+	color:  blue;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+.newsletter-text p{
+	color: black;
+	font-size: large;
+	font-weight: 500;
+	margin-bottom: 48px;
+}
+
+.form form{
+	width: 100%;
+	max-width: 460px;
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form form input:first-child{
+	display: inline-block;
+	width: 100%;
+	outline: none;
+	padding: 16px 140px 16px 15px;
+	border: 2px solid blue;
+	border-radius: 10px;
+	background: white;
+}
+
+.form form input:last-child{
+	position: absolute;
+	display: inline-block;
+	border: none;
+	outline: none;
+	background:  blue;
+	color: var(--clr-bg);
+	padding: 16px 40px;
+	border-radius: 0px 10px 10px 0px;
+	cursor: pointer;
+	top: 2px;
+	right: 1px;
+}
+
+.form form input:last-child:hover{
+	background: #11088a;
+}
+
+footer {
+  background-color: #7b3911;
+}
+
+.foot {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px 6%;
+	padding: 15px;
+}
+
+.last-text p{
+	text-align: center;
+	color: black;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.upBtn {
+	color: #0726f1;
+}
+
+
+
+#upBtn {
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #0726f1; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 10px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 10px; /* Increase font size */
+}
+  
+#upBtn:hover {
+	background-color: var(--clr-primary-hover);
+}
 
 
 /* On smaller screens, decrease text size */
